@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="bronze : " />
+    <meta name="description" content="gold : " />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>bronze</title>
+    <title>gold</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/b42626/MiU3">View on GitHub</a>
 
-          <h1 id="project_title">bronze</h1>
+          <h1 id="project_title">gold</h1>
           <h2 id="project_tagline"></h2>
 
             <section id="downloads">
@@ -32,233 +32,312 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <p>
-        </p>
-            Media library (bronze)<h1>
-<a name="media-library" class="anchor" href="#media-library"><span class="octicon octicon-link"></span></a>Media library</h1>
-         <a href="#">Delete media</a>
-            <a href="#">Show media</a>
-            <a href="additem.html">Add New media</a>
-            
-            <a href="index.html">home</a>
-         
-            Add media
-                <p>* Fields are required.</p>
-                <ul></ul>
-                <ul>
-<li>
-                     *Media Name:</li>
-                    <li>*Media Type:<br>
-</li>
-                    <li>Media format:
-                        <ul>
-<li>cd</li>
-                            <li>dvd</li>
-                            <li>bluray</li>
-                        </ul>
-</li>
-                    <li>favorite</li>
-                    <li>Yes</li>
-                    <li>
-                        rating?
-                        0
-                        </li>
-                    <li>
-                        comments:</li>
-                </ul><pre><code>    &lt;/form&gt;
-    &lt;script type="text/javascript" src="js/JSON.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+    </p>
+        Media library<pre><code>&lt;/head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div data-role="page" id="additem" data-theme="d" data-add-back-btn="true"&gt;
+    &lt;div data-role="header"&gt;
+        &lt;h1&gt;&lt;center&gt;&lt;a href="index.html" class="logoAlign"&gt;Media library&lt;/a&gt;&lt;/center&gt;&lt;/h1&gt;
+        &lt;small&gt;&lt;center&gt;Media library (gold)&lt;/center&gt;&lt;/small&gt;    
+    &lt;/div&gt;
+    &lt;div data-role="content"&gt;
+        &lt;section id="addNew"&gt;
+            &lt;center&gt;&lt;h2&gt;Add New Media&lt;/h2&gt;&lt;/center&gt;
+        &lt;/section&gt;
+        &lt;section id="nav"&gt;
+            &lt;center&gt;
+            &lt;br /&gt;&lt;br /&gt;
+            &lt;a href="additem.html" id="addNew" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="plus" data-inline="true" data-theme="e" style="display:none;"&gt;Add New Media&lt;/a&gt;
+            &lt;a href="#items" id="displayLink" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="grid" data-inline="true" data-theme="e"&gt;Show All Media&lt;/a&gt;
+            &lt;a href="#clear" id="clear" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="delete" data-inline="true" data-theme="e"&gt;Delete All Media&lt;/a&gt;
+            &lt;br /&gt;&lt;br /&gt;
+            &lt;/center&gt;
+        &lt;/section&gt;
+        &lt;section id="errors"&gt;&lt;/section&gt;
+        &lt;section id="feature"&gt;
+            &lt;form action="#" method="post" id="mediaForm"&gt;
+                &lt;fieldset id="mediaFieldSet"&gt;
+                    &lt;center&gt;
+                        &lt;span&gt;&lt;small&gt;* fields required.&lt;/small&gt;&lt;br /&gt;&lt;/span&gt;
+                    &lt;/center&gt;
+                        &lt;ul id="media"&gt;
+                            &lt;section id="select"&gt;
+                                &lt;li id="select"&gt;
+                                    &lt;label for="mtype"&gt;Media Type&lt;/label&gt;
+                                    &lt;div id="hint"&gt;Required:&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mdate"&gt;
+                                &lt;li id="mdate"&gt;
+                                    &lt;label for="mdate"&gt;Media Date&lt;/label&gt;
+                                    &lt;br /&gt;
+                                    &lt;input type="date" id="mdate" placeholder="Media Date mm/dd/yyyy" /&gt;
+                                    &lt;div id="hint"&gt;Required: 1/17/2013&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mname"&gt;
+                                &lt;li id="mname"&gt;
+                                    &lt;label for="mname"&gt;Media Name&lt;/label&gt;
+                                    &lt;br /&gt;
+                                    &lt;input type="text" id="mname" placeholder="* Media Name"  /&gt;
+                                    &lt;div id="hint"&gt;Required: Name of Media&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mediarating"&gt;
+                                &lt;li id="mediarating"&gt;
+                                    &lt;label for="mrating"&gt;Media Rating:&lt;/label&gt;
+                                    &lt;br /&gt;
+                                    &lt;input type="range" min="1" max="10" name="rating" value="5" id="mrating" /&gt;
+                                    &lt;div id="hint"&gt;0 = Garbage. 10 = great&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mediatopics"&gt;
+                                &lt;li id="mediatopics"&gt;
+                                    &lt;label for="mtopic"&gt;Media format:&lt;/label&gt;
+                                        &lt;br /&gt;
+                                        &lt;input type="radio" value="cd" id="cd" name="mtopics" data-mini="true" /&gt;
+                                            &lt;label for="cd"&gt;cd&lt;/label&gt;
+                                            &lt;br /&gt;
+                                        &lt;input type="radio" value="dvd" id="dvd" name="mtopics" data-mini="true" /&gt;
+                                            &lt;label for="dvd"&gt;dvd&lt;/label&gt;
+                                            &lt;br /&gt;
+                                        &lt;input type="radio" value="bluray" id="bluray" name="mtopics" data-mini="true" /&gt;
+                                            &lt;label for="bluray"&gt;bluray&lt;/label&gt;
+                                            &lt;br /&gt;
+                                        &lt;div id="hint"&gt;What type of format is the disk?&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mediatags"&gt;
+                                &lt;li id="mediatags"&gt;
+                                    &lt;label for="mtags"&gt;Media Tags&lt;/label&gt;
+                                    &lt;br /&gt;
+                                    &lt;input type="text" id="mtags" placeholder="Media Tags"  /&gt;
+                                    &lt;div id="hint"&gt;Separate by space&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mediagraphic"&gt;
+                                &lt;li id="mediagraphic"&gt;
+                                    &lt;label for="mgraphic"&gt;Image&lt;/label&gt;
+                                    &lt;br /&gt;
+                                    &lt;input type="text" id="mgraphic" placeholder="Image"  /&gt;
+                                    &lt;div id="hint"&gt;http:&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="mediacomments"&gt;
+                                &lt;li id="mediacomments"&gt;
+                                    &lt;label for="mcomments"&gt;Comments&lt;/label&gt;
+                                    &lt;br /&gt;
+                                    &lt;textarea id="mcomments" placeholder="Comments" /&gt;&lt;/textarea&gt;
+                                    &lt;div id="hint"&gt;Info about the media&lt;/div&gt;
+                                &lt;/li&gt;
+                            &lt;/section&gt;
+                            &lt;br /&gt;
+                            &lt;section id="submit"&gt;
+                                &lt;div id="submit"&gt;
+                                    &lt;input type="submit" data-theme="e" value="Save Media" id="submit" /&gt;
+                                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href="" id="cancel"&gt;cancel&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/section&gt;
+                        &lt;/ul&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+            &lt;br /&gt;&lt;br /&gt;
+        &lt;/section&gt;  
+    &lt;/div&gt;
+    &lt;div data-role="footer" data-position="fixed"&gt;
+        &lt;div data-role="navbar"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript" src="js/json.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
 
 <p>
 
     </p>
-
-<pre><code>    &lt;meta charset="utf-8"&gt;
-
-    &lt;title&gt;Media library&lt;/title&gt;
-    &lt;meta name="HandheldFriendly" content="True"&gt;
-    &lt;meta name="MobileOptimized" content="320"/&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-
-    &lt;meta http-equiv="cleartype" content="on"&gt;
-
+        Media library<pre><code>    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; 
     &lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" /&gt;
-    &lt;link rel="stylesheet" href="css/style.css" /&gt;
-
-    &lt;script src="js/libs/modernizr.custom.min.js"&gt;&lt;/script&gt;
-    &lt;script src="http://code.jquery.com/jquery-1.6.4.min.js"&gt;&lt;/script&gt;
-    &lt;script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="css/style_A.css" type="text/css" /&gt;
 
 &lt;/head&gt;
+
 &lt;body&gt;
-
-    &lt;div data-role="page" id="home" data-theme="a"&gt;
-
-        &lt;div data-role="header" data-position="fixed"&gt;
-
-           &lt;/center&gt;
-           &lt;p&gt;&lt;a href="#home"&gt;Media library&lt;/a&gt;&lt;/p&gt;
-            &lt;/center&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="content"&gt;
-
-            &lt;center&gt;
-            &lt;p&gt;&lt;a href="additem.html" id="addNew"&gt;&lt;img src="images/feature_image_with_cta.svg" width="200px" height="200px"&gt;&lt;/a&gt;&lt;/p&gt;
-            &lt;/center&gt;
-
-            &lt;h3&gt;Browse Media&lt;/h3&gt;
-            &lt;ul data-role="listview" data-inset="true" data-ajax="false"&gt;
-                &lt;li&gt;&lt;a href="#browse" id="browseButton" border="0" width="35" height="35" alt="Browse"&gt;Browse&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-
-            &lt;h3&gt;New media added&lt;/h3&gt;
-            &lt;div data-role="collapsible-set" data-inset="true"&gt;
-
-                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
-                            &lt;h3&gt;Defiance&lt;/h3&gt;
-                            &lt;p&gt; Third person open world MMO&lt;/p&gt;
-                        &lt;/div&gt;
-
-                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
-                            &lt;h3&gt;Tomb Raider&lt;/h3&gt;
-                            &lt;p&gt;&lt;strong&gt;Survival action game.&lt;/strong&gt;&lt;/p&gt;
-                        &lt;/div&gt;
-
-                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
-                            &lt;h3&gt;Imagine dragons&lt;/h3&gt;
-                            &lt;p&gt;&lt;strong&gt;American alternative rock band.&lt;/strong&gt;&lt;/p&gt;
-                        &lt;/div&gt;
-
-                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
-                            &lt;h3&gt;Borderlands 2&lt;/h3&gt;
-                            &lt;p&gt;&lt;strong&gt;First person open world RPG.&lt;/strong&gt;&lt;/p&gt;
-                        &lt;/div&gt;
-
-            &lt;/div&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="footer" data-position="fixed"&gt;
-
-            &lt;div data-role="navbar" data-icon-pos="top"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+&lt;div data-role="page" id="home" data-theme="d" data-add-back-btn="true"&gt;
+    &lt;div data-role="header" data-position="fixed"&gt;
+        &lt;h1&gt;&lt;a href="index.html" class="logoAlign"&gt;Media library&lt;/a&gt;&lt;/h1&gt;
+        &lt;small&gt;&lt;center&gt;Media library (gold)&lt;/center&gt;&lt;/small&gt;    
     &lt;/div&gt;
-
-    &lt;div data-role="page" id="browse" data-add-back-btn="true" data-theme="a"&gt;
-
-        &lt;div data-role="header" data-position="fixed"&gt;
-
-            &lt;center&gt;
-                &lt;p&gt;&lt;a href="#home"&gt;Media library&lt;/a&gt;&lt;/p&gt;
-            &lt;/center&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="content"&gt;
-
-
-                &lt;h3&gt;Create load out&lt;/h3&gt;
-                &lt;div data-role="listview" class="ui-grid-b" data-inset="true" data-filter="true"&gt;
-                    &lt;div class="ui-block-a"&gt;&lt;a href="#browse2" data-filter="Xbox" id="Xbox"&gt;&lt;img src="images/Xbox.jpg" border="0" width="35" height="35" alt="Browse Xbox" data-role="button"&gt;&lt;/br&gt;Browse Xbox&lt;/a&gt;&lt;/div&gt;
-                    &lt;div class="ui-block-b"&gt;&lt;a href="#browse2" data-filter="Playstation" id="Playsation"&gt;&lt;img src="images/Playstation.jpg" border="0" width="35" height="35" alt="Browse Playstation" data-role="button"&gt;&lt;/br&gt;Browse Playstation&lt;/a&gt;&lt;/div&gt;
-                    &lt;div class="ui-block-c"&gt;&lt;a href="#browse2" data-filter="wiiu" id="Wiiu"&gt;&lt;img src="images/Wiiu.jpg" border="0" width="35" height="35" alt="Browse Wii u" data-role="button"&gt;&lt;/br&gt;Browse Wii u&lt;/a&gt;&lt;/div&gt;
-                    &lt;div class="ui-block-a"&gt;&lt;a href="#browse2" data-filter="PC" id="PC"&gt;&lt;img src="images/PC.jpg" border="0" width="35" height="35" alt="Browse PC" data-role="button"&gt;&lt;/br&gt;Browse PC&lt;/a&gt;&lt;/div&gt;
-                    &lt;div class="ui-block-b"&gt;&lt;a href="#browse2" data-filter="Movie" id="Movie"&gt;&lt;img src="images/Movie.jpg" border="0" width="35" height="35" alt="Browse Movies" data-role="button"&gt;&lt;/br&gt;Browse Movies&lt;/a&gt;&lt;/div&gt;
-                    &lt;div class="ui-block-c"&gt;&lt;a href="#browse2" data-filter="Music" id="Music"&gt;&lt;img src="images/Music.jpg" border="0" width="35" height="35" alt="Browse Music" data-role="button"&gt;&lt;/br&gt;Browse Music&lt;/a&gt;&lt;/div&gt;
-
-                &lt;/ul&gt;
-            &lt;/div&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="footer"&gt;
-            &lt;div data-role="navbar" data-icon-pos="top"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-    &lt;/div&gt;
-
-    &lt;div data-role="page" id="browse2" data-add-back-btn="true" data-theme="a"&gt;
-
-        &lt;div data-role="header" data-position="fixed"&gt;
-
-            &lt;center&gt;
-                &lt;p&gt;&lt;a href="#home"&gt;Media library&lt;/a&gt;&lt;/p&gt;
-            &lt;/center&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="content"&gt;
-
-            &lt;h3&gt;Upcoming games&lt;/h3&gt;
-            &lt;p&gt;Theres no content currently available!&lt;/p&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="footer"&gt;
-            &lt;div data-role="navbar" data-icon-pos="top"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-    &lt;/div&gt;
-
-    &lt;div data-role="page" id="links" data-add-back-btn="true" data-theme="a"&gt;
-
-        &lt;div data-role="header" data-position="fixed"&gt;
-
-            &lt;center&gt;
-                &lt;p&gt;&lt;a href="#home"&gt;media library&lt;/a&gt;&lt;/p&gt;
-            &lt;/center&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="content"&gt;
-
+    &lt;div data-role="content"&gt;
+        &lt;section id="feature"&gt;
             &lt;p&gt;
             &lt;center&gt;
-              &lt;a href="https://github.com/b42626/MiU3/tree/master/gold" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;gold Code&lt;/a&gt;&lt;br/&gt;
-            &lt;a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;gold Live&lt;/a&gt;&lt;br/&gt;
-            &lt;a href="https://github.com/b42626/MiU3/tree/master/bronze" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;bronze Code&lt;/a&gt;&lt;br/&gt;
-            &lt;a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;bronze Live&lt;/a&gt;&lt;br/&gt;
+                &lt;a href="additem.html"&gt;
+                    &lt;img src="images/feature_image_with_cta.svg" width="120px" height="126px" border="0"/&gt;
+                &lt;/a&gt;
             &lt;/center&gt;
             &lt;/p&gt;
-
-        &lt;/div&gt;
-
-        &lt;div data-role="footer"&gt;
-            &lt;div data-role="navbar" data-icon-pos="top"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;/section&gt;  
 
     &lt;/div&gt;
+    &lt;div data-role="footer" data-position="fixed"&gt;
+        &lt;div data-role="navbar" data-icon-pos="top"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-role="page" id="search" data-theme="d" data-add-back-btn="true"&gt;
+    &lt;div data-role="header"&gt;
+            &lt;h1&gt;&lt;a href="index.html" class="logoAlign"&gt;Media library&lt;/a&gt;&lt;/h1&gt;
+            &lt;small&gt;&lt;center&gt;Media library (gold)&lt;/center&gt;&lt;/small&gt;    
+    &lt;/div&gt;
+    &lt;div data-role="content"&gt;
+        &lt;section id="test"&gt;&lt;p&gt;Search here.&lt;/p&gt;&lt;/section&gt;
+    &lt;/div&gt;
+    &lt;div data-role="footer" data-position="fixed"&gt;
+        &lt;div data-role="navbar"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;  
+&lt;div data-role="page" id="latest" data-theme="d" data-add-back-btn="true"&gt;
+    &lt;div data-role="header"&gt;
+            &lt;h1&gt;&lt;a href="index.html" class="logoAlign"&gt;Media library&lt;/a&gt;&lt;/h1&gt;
+            &lt;small&gt;&lt;center&gt;Media library (gold)&lt;/center&gt;&lt;/small&gt;    
+    &lt;/div&gt;
+    &lt;div data-role="content"&gt;
+        &lt;section id="newStream"&gt;
+            &lt;h2&gt;Latest Media&lt;/h2&gt;
+                &lt;ul data-role="listview" data-inset="true"&gt;
+                    &lt;li&gt;
+                        &lt;a href="additem.html#items&amp;ui-page=0-29" rel="external" data-ajax="true"&gt;
+                            &lt;h3&gt;Defiance&lt;/h3&gt;
+                            &lt;p&gt; Third person open world MMO&lt;/p&gt;
+                            &lt;p class="ui-li-aside"&gt;&lt;strong&gt;3/4/2013&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="additem.html#items&amp;ui-page=0-28" rel="external" data-ajax="true"&gt;
+                            &lt;h3&gt;Tomb Raider&lt;/h3&gt;
+                            &lt;p&gt;&lt;strong&gt;Survival action game.&lt;/strong&gt;&lt;/p&gt;
+                            &lt;p class="ui-li-aside"&gt;&lt;strong&gt;2/14/2013&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="additem.html#items&amp;ui-page=0-27" rel="external" data-ajax="true"&gt;
+                            &lt;h3&gt;Imagine dragons&lt;/h3&gt;
+                            &lt;p&gt;&lt;strong&gt;American alternative rock band.&lt;/strong&gt;&lt;/p&gt;
+                            &lt;p class="ui-li-aside"&gt;&lt;strong&gt;2/20/2013&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="additem.html#items&amp;ui-page=0-26" rel="external" data-ajax="true"&gt;
+                            &lt;h3&gt;Borderlands 2&lt;/h3&gt;
+                            &lt;p&gt;&lt;strong&gt;First person open world RPG.&lt;/strong&gt;&lt;/p&gt;
+                            &lt;p class="ui-li-aside"&gt;&lt;strong&gt;4/6/2013&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;   
+        &lt;/section&gt;
+    &lt;/div&gt;
+    &lt;div data-role="footer" data-position="fixed"&gt;
+        &lt;div data-role="navbar"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="ui-btn-active" href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-role="page" id="info" data-theme="d" data-add-back-btn="true"&gt; 
+    &lt;div data-role="header"&gt;
+            &lt;h1&gt;&lt;a href="index.html" class="logoAlign"&gt;Media library&lt;/a&gt;&lt;/h1&gt;
+            &lt;small&gt;&lt;center&gt;Media library (gold)&lt;/center&gt;&lt;/small&gt;    
+    &lt;/div&gt;
+    &lt;div data-role="content"&gt;
+        &lt;p&gt;
+        &lt;center&gt;
+            &lt;a href="https://github.com/b42626/MiU3/tree/master/gold" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;gold Code&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;gold Live&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://github.com/b42626/MiU3/tree/master/bronze" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;bronze Code&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://b42626.github.io/MiU3" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;bronze Live&lt;/a&gt;&lt;br/&gt;
+        &lt;/center&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div data-role="footer" data-position="fixed"&gt;
+        &lt;div data-role="navbar"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="ui-btn-active" href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-role="page" id="browse" data-theme="d" data-add-back-btn="true"&gt;
+    &lt;div data-role="header"&gt;
+            &lt;h1&gt;&lt;a href="index.html" class="logoAlign"&gt;Media library&lt;/a&gt;&lt;/h1&gt;
+            &lt;small&gt;&lt;center&gt;Media library (gold)&lt;/center&gt;&lt;/small&gt;    
+    &lt;/div&gt;
+    &lt;div data-role="content"&gt;
+        &lt;section id="browse"&gt;
+            &lt;h3&gt;browse Media&lt;/h3&gt;
+                &lt;ul data-role="listview" data-inset="true" data-theme="d" data-filter="true"&gt;
+                    &lt;li&gt;&lt;a href="additem.html#items" data-filter="Xbox" id="Xbox"&gt;&lt;img src="images/Xbox.jpg" border="0" width="35" height="35" alt="Browse Xbox"/&gt;Xbox&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="additem.html#items" data-filter="Playstation" id="Playstation"&gt;&lt;img src="images/Playstation.jpg" border="0" width="35" height="35" alt="Browse Playstation"/&gt;Playstation&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="additem.html#items" data-filter="Music" id="Music"&gt;&lt;img src="images/Music.jpg" border="0" width="35" height="35" alt="Browse Music"/&gt;Music&lt;/a&gt;&lt;/li&gt;            
+                    &lt;li&gt;&lt;a href="additem.html#items" data-filter="Wii u" id="Wii u"&gt;&lt;img src="images/Wiiu.jpg" border="0" width="35" height="35" alt="Browse Wii u"/&gt;Wii u&lt;/a&gt;&lt;/li&gt;         
+                    &lt;li&gt;&lt;a href="additem.html#items" data-filter="PC" id="PC"&gt;&lt;img src="images/PC.jpg" border="0" width="35" height="35" alt="Browse PC"/&gt;PC&lt;/a&gt;&lt;/li&gt;           
+                    &lt;li&gt;&lt;a href="additem.html#items" data-filter="Movie" id="Movie"&gt;&lt;img src="images/Movie.jpg" border="0" width="35" height="35" alt="Browse Movie"/&gt;Movie&lt;/a&gt;&lt;/li&gt;            
+                &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+    &lt;div data-role="footer" data-position="fixed"&gt;
+        &lt;div data-role="navbar"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="ui-btn-active" href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true"&gt;Latest&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
 
-    &lt;script type="text/javascript" src="js/JSON.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.jquery.com/jquery-1.6.4.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/json.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+
 &lt;/body&gt;
 </code></pre>
 
@@ -269,7 +348,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">bronze maintained by <a href="https://github.com/b42626">b42626</a></p>
+        <p class="copyright">gold maintained by <a href="https://github.com/b42626">b42626</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
