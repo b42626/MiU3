@@ -1,0 +1,40 @@
+/*
+    Matt Nowakowski
+    MIU
+    term 1306
+    project 2
+*/
+
+
+
+
+article, aside, figure, footer, header, hgroup, nav, section {
+	display:block;
+}
+
+body {
+	font-family: Tahoma, Verdana;
+	font-size: 17px;
+}
+div#hint {
+	font-size: small;
+	color: #C0C0C0;
+}
+
+li {
+	list-style: none;
+}
+
+div #cancel {
+	
+}
+
+div,a#footer {
+	font-size: small;
+	font-variant: small-cap;
+	text-decoration: none;
+}
+
+div #submit {
+	
+}

@@ -1,0 +1,72 @@
+<!--
+Matt Nowakowski
+ MIU
+ term 1306
+ Project 2-->
+
+
+
+
+<html>
+        <head>
+            <meta charset="utf-8" />
+            <meta description= "This is an app creating load outs." />
+            <meta keywords="weapons, load outs,classes" />
+            <meta name="robots" content="index, follow" />
+            <meta name="viewport" content="user-scalable=no, width=device-width" />
+            <meta name="viewport" content="target-densitydpi=device-dpi" />
+            <meta name="HandheldFriendly" content="True">
+            <meta name="MobileOptimized" content="320" />
+            <title>Media library (bronze)</title>
+            <link rel="stylesheet" href="css/style.css" type="text/css" />
+        </head>
+    </head>
+    <body>
+        <h1>Media library</h1>
+        <nav>
+            <a href = "#" id = "clearData">Delete media</a>
+            <a href = "#" id = "displayData">Show media</a>
+            <a href = "additem.html" id = "addNew" style = "display: none;" >Add New media</a>
+            </br>
+            <a href="index.html" id="home">home</a>
+        </nav>
+        <form action="#" method="post" id = "weaponForm">
+            <fieldset>
+                <legend>Add media</legend>
+                <p>* Fields are required.</p>
+                <span><ul id="errors"></ul></span>
+                <ul id="fields">
+                    <li>
+                     <label for="wn">*Media Name:</label><input type="text" id="wn"/>
+                    </li>
+                    <li id="select"><label for="weapon">*Media Type:</label><br /></li>
+                    <li>Media format:
+                        <ul>
+                            <li><input type="radio" value="cd" id="cd"  name="deadly" /><label for="cd">cd</label></li>
+                            <li><input type="radio" value="dvd" id="dvd"  name="deadly" /><label for="dvd">dvd</label></li>
+                            <li><input type="radio" value="bluray" id="bluray"  name="deadly" /><label for="bluray">bluray</label></li>
+                        </ul>
+                    </li>
+                    <li>favorite</li>
+                    <li><input type="checkbox" id="liked" value="Yes" class = "checkbox" /><label for="liked">Yes</label></li>
+                    <li>
+                        <label for="weapon">rating?</label>
+                        <input type="range" min="0" max="10" value = "0" onchange = "showNumber(this.value)" /><span id="weapon">0</span>
+                        <script type="text/javascript">
+                            function showNumber(newNumber){
+                                document.getElementById("weapon").innerHTML = newNumber;
+                            }
+                        </script>
+                    </li>
+                    <li>
+                        <label for="comments">comments:</label></br><textarea id="comments"></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+            <input type = "submit" value = "Save media" id = "saveData"/>
+
+        </form>
+        <script type="text/javascript" src="js/JSON.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

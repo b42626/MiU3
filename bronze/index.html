@@ -1,0 +1,199 @@
+<!--
+Matt Nowakowski
+ MIU
+ term 1306
+ Project 2-->
+
+
+
+
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Media library</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="js/libs/modernizr.custom.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+
+    </head>
+    <body>
+
+        <div data-role="page" id="home" data-theme="a">
+
+            <div data-role="header" data-position="fixed">
+
+               </center>
+               <p><a href="#home">Media library</a></p>
+                </center>
+                
+            </div>
+
+            <div data-role="content">
+
+                <center>
+                <p><a href="additem.html" id="addNew"><img src="images/feature_image_with_cta.svg" width="200px" height="200px"></a></p>
+                </center>
+
+                <h3>Browse Media</h3>
+                <ul data-role="listview" data-inset="true" data-ajax="false">
+                    <li><a href="#browse" id="browseButton" border="0" width="35" height="35" alt="Browse">Browse</a></li>
+                </ul>
+
+                <h3>New media added</h3>
+                <div data-role="collapsible-set" data-inset="true">
+
+                            <div data-role="collapsible" data-collapsed="true">
+                                <h3>Defiance</h3>
+								<p> Third person open world MMO</p>
+                            </div>
+
+                            <div data-role="collapsible" data-collapsed="true">
+                                <h3>Tomb Raider</h3>
+								<p><strong>Survival action game.</strong></p>
+                            </div>
+
+                            <div data-role="collapsible" data-collapsed="true">
+                                <h3>Imagine dragons</h3>
+								<p><strong>American alternative rock band.</strong></p>
+                            </div>
+
+                            <div data-role="collapsible" data-collapsed="true">
+                                <h3>Borderlands 2</h3>
+								<p><strong>First person open world RPG.</strong></p>
+                            </div>
+
+                </div>
+
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+
+                <div data-role="navbar" data-icon-pos="top">
+                    <ul>
+                        <li><a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true">Add</a></li>
+                        <li><a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true">Browse</a></li>
+                        <li><a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true">Links</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
+        <div data-role="page" id="browse" data-add-back-btn="true" data-theme="a">
+
+            <div data-role="header" data-position="fixed">
+
+                <center>
+                    <p><a href="#home">Media library</a></p>
+                </center>
+
+            </div>
+
+            <div data-role="content">
+
+
+                    <h3>Create load out</h3>
+                    <div data-role="listview" class="ui-grid-b" data-inset="true" data-filter="true">
+                        <div class="ui-block-a"><a href="#browse2" data-filter="Xbox" id="Xbox"><img src="images/Xbox.jpg" border="0" width="35" height="35" alt="Browse Xbox" data-role="button"></br>Browse Xbox</a></div>
+                        <div class="ui-block-b"><a href="#browse2" data-filter="Playstation" id="Playsation"><img src="images/Playstation.jpg" border="0" width="35" height="35" alt="Browse Playstation" data-role="button"></br>Browse Playstation</a></div>
+                        <div class="ui-block-c"><a href="#browse2" data-filter="wiiu" id="Wiiu"><img src="images/Wiiu.jpg" border="0" width="35" height="35" alt="Browse Wii u" data-role="button"></br>Browse Wii u</a></div>
+                        <div class="ui-block-a"><a href="#browse2" data-filter="PC" id="PC"><img src="images/PC.jpg" border="0" width="35" height="35" alt="Browse PC" data-role="button"></br>Browse PC</a></div>
+                        <div class="ui-block-b"><a href="#browse2" data-filter="Movie" id="Movie"><img src="images/Movie.jpg" border="0" width="35" height="35" alt="Browse Movies" data-role="button"></br>Browse Movies</a></div>
+                        <div class="ui-block-c"><a href="#browse2" data-filter="Music" id="Music"><img src="images/Music.jpg" border="0" width="35" height="35" alt="Browse Music" data-role="button"></br>Browse Music</a></div>
+                        
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div data-role="footer">
+                <div data-role="navbar" data-icon-pos="top">
+                    <ul>
+                        <li><a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true">Add</a></li>
+                        <li><a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true">Browse</a></li>
+                        <li><a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true">Links</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div data-role="page" id="browse2" data-add-back-btn="true" data-theme="a">
+
+            <div data-role="header" data-position="fixed">
+
+                <center>
+                    <p><a href="#home">Media library</a></p>
+                </center>
+
+            </div>
+
+            <div data-role="content">
+
+                <h3>Upcoming games</h3>
+                <p>Theres no content currently available!</p>
+
+            </div>
+
+            <div data-role="footer">
+                <div data-role="navbar" data-icon-pos="top">
+                    <ul>
+                        <li><a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true">Add</a></li>
+                        <li><a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true">Browse</a></li>
+                        <li><a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true">Links</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            
+        <div data-role="page" id="links" data-add-back-btn="true" data-theme="a">
+
+            <div data-role="header" data-position="fixed">
+
+                <center>
+                    <p><a href="#home">media library</a></p>
+                </center>
+
+            </div>
+
+            <div data-role="content">
+
+                <p>
+                <center>
+                  <a href="https://github.com/b42626/MiU2/tree/master/gold" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e">gold Code</a><br/>
+				<a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e">gold Live</a><br/>
+				<a href="https://github.com/b42626/MiU2/tree/master/bronze" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e">bronze Code</a><br/>
+				<a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e">bronze Live</a><br/>
+                </center>
+                </p>
+
+            </div>
+
+            <div data-role="footer">
+                <div data-role="navbar" data-icon-pos="top">
+                    <ul>
+                        <li><a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true">Add</a></li>
+                        <li><a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true">Browse</a></li>
+                        <li><a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true">Links</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+     
+        <script type="text/javascript" src="js/JSON.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+    
+    <!--
+  Matt Nowakowski
+  MIU
+  term 1306
+  project 3
+    -->
+    
+<html lang="en">
+	<head>
+		<title>Media library</title>
+		<meta type="charset" content = "utf-8" />
+		<meta type="robots" content="index,follow" />
+		<meta type="description" content="Manage your media library" />
+		<meta type="keywords" content = "media library, add media, matt nowakowski, vfw" />
+		<meta type="viewport" content="user-scalable=yes, width=device-width" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		
+	</head>
+	</head>
+	<body>
+	<div data-role="page" id="additem" data-theme="d" data-add-back-btn="true">
+		<div data-role="header">
+			<h1><center><a href="index.html" class="logoAlign">Media library</a></center></h1>
+			<small><center>Media library (gold)</center></small>	
+		</div>
+		<div data-role="content">
+			<section id="addNew">
+				<center><h2>Add New Media</h2></center>
+			</section>
+			<section id="nav">
+				<center>
+				<br /><br />
+				<a href="additem.html" id="addNew" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="plus" data-inline="true" data-theme="e" style="display:none;">Add New Project</a>
+				<a href="#items" id="displayLink" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="grid" data-inline="true" data-theme="e">Show All Projects</a>
+				<a href="#clear" id="clear" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="delete" data-inline="true" data-theme="e">Delete All Projects</a>
+				<br /><br />
+				</center>
+			</section>
+			<section id="errors"></section>
+			<section id="feature">
+				<form action="#" method="post" id="mediaForm">
+					<fieldset id="mediaFieldSet">
+						<center>
+							<span><small>* fields required.</small><br /></span>
+						</center>
+							<ul id="media">
+								<section id="select">
+									<li id="select">
+										<label for="mtype">Media Type</label>
+										<div id="hint">Required:</div>
+									</li>
+								</section>
+								<br />
+								<section id="mdate">
+									<li id="mdate">
+										<label for="mdate">Media Date</label>
+										<br />
+										<input type="date" id="mdate" placeholder="Media Date mm/dd/yyyy" />
+										<div id="hint">Required: 1/17/2013</div>
+									</li>
+								</section>
+								<br />
+								<section id="mname">
+									<li id="mname">
+										<label for="mname">Media Name</label>
+										<br />
+										<input type="text" id="mname" placeholder="* Media Name"  />
+										<div id="hint">Required: Name of Media</div>
+									</li>
+								</section>
+								<br />
+								<section id="mediarating">
+									<li id="mediarating">
+										<label for="mrating">Media Rating:</label>
+										<br />
+										<input type="range" min="1" max="10" name="rating" value="5" id="mrating" />
+										<div id="hint">0 = Garbage. 10 = great</div>
+									</li>
+								</section>
+								<br />
+								<section id="mediatopics">
+									<li id="mediatopics">
+										<label for="mtopic">Media format:</label>
+											<br />
+											<input type="radio" value="cd" id="cd" name="mtopics" data-mini="true" />
+												<label for="cd">cd</label>
+												<br />
+											<input type="radio" value="dvd" id="dvd" name="mtopics" data-mini="true" />
+												<label for="dvd">dvd</label>
+												<br />
+											<input type="radio" value="bluray" id="bluray" name="mtopics" data-mini="true" />
+												<label for="bluray">bluray</label>
+												<br />
+											<div id="hint">What type of format is the disk?</div>
+									</li>
+								</section>
+								<br />
+								<section id="mediatags">
+									<li id="mediatags">
+										<label for="mtags">Media Tags</label>
+										<br />
+										<input type="text" id="mtags" placeholder="Media Tags"  />
+										<div id="hint">Separate by space</div>
+									</li>
+								</section>
+								<br />
+								<section id="mediagraphic">
+									<li id="mediagraphic">
+										<label for="mgraphic">Image</label>
+										<br />
+										<input type="text" id="mgraphic" placeholder="Image"  />
+										<div id="hint">http:</div>
+									</li>
+								</section>
+								<br />
+								<section id="mediacomments">
+									<li id="mediacomments">
+										<label for="mcomments">Comments</label>
+										<br />
+										<textarea id="mcomments" placeholder="Comments" /></textarea>
+										<div id="hint">Info about the media</div>
+									</li>
+								</section>
+								<br />
+								<section id="submit">
+									<div id="submit">
+										<input type="submit" data-theme="e" value="Save Media" id="submit" />
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" id="cancel">cancel</a>
+									</div>
+								</section>
+							</ul>
+					</fieldset>
+				</form>
+				<br /><br />
+			</section>	
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#browse"  id="browse" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true">Browse</a></li>
+					<li><a href="#latest" id="latest" rel="internal" data-ajax="true" data-inline="true" data-icon="star" data-add-back-btn="true">Latest</a></li>
+					<li><a href="#info" id="info" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true">Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
