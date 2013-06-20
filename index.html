@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="bronze : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>bronze</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/b42626/MiU3">View on GitHub</a>
+
+          <h1 id="project_title">bronze</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/b42626/MiU3/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/b42626/MiU3/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>
+        </p>
+            Media library (bronze)<h1>
+<a name="media-library" class="anchor" href="#media-library"><span class="octicon octicon-link"></span></a>Media library</h1>
+         <a href="#">Delete media</a>
+            <a href="#">Show media</a>
+            <a href="additem.html">Add New media</a>
+            
+            <a href="index.html">home</a>
+         
+            Add media
+                <p>* Fields are required.</p>
+                <ul></ul>
+                <ul>
+<li>
+                     *Media Name:</li>
+                    <li>*Media Type:<br>
+</li>
+                    <li>Media format:
+                        <ul>
+<li>cd</li>
+                            <li>dvd</li>
+                            <li>bluray</li>
+                        </ul>
+</li>
+                    <li>favorite</li>
+                    <li>Yes</li>
+                    <li>
+                        rating?
+                        0
+                        </li>
+                    <li>
+                        comments:</li>
+                </ul><pre><code>    &lt;/form&gt;
+    &lt;script type="text/javascript" src="js/JSON.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>
+
+    </p>
+
+<pre><code>    &lt;meta charset="utf-8"&gt;
+
+    &lt;title&gt;Media library&lt;/title&gt;
+    &lt;meta name="HandheldFriendly" content="True"&gt;
+    &lt;meta name="MobileOptimized" content="320"/&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;meta http-equiv="cleartype" content="on"&gt;
+
+    &lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" /&gt;
+    &lt;link rel="stylesheet" href="css/style.css" /&gt;
+
+    &lt;script src="js/libs/modernizr.custom.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/jquery-1.6.4.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div data-role="page" id="home" data-theme="a"&gt;
+
+        &lt;div data-role="header" data-position="fixed"&gt;
+
+           &lt;/center&gt;
+           &lt;p&gt;&lt;a href="#home"&gt;Media library&lt;/a&gt;&lt;/p&gt;
+            &lt;/center&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="content"&gt;
+
+            &lt;center&gt;
+            &lt;p&gt;&lt;a href="additem.html" id="addNew"&gt;&lt;img src="images/feature_image_with_cta.svg" width="200px" height="200px"&gt;&lt;/a&gt;&lt;/p&gt;
+            &lt;/center&gt;
+
+            &lt;h3&gt;Browse Media&lt;/h3&gt;
+            &lt;ul data-role="listview" data-inset="true" data-ajax="false"&gt;
+                &lt;li&gt;&lt;a href="#browse" id="browseButton" border="0" width="35" height="35" alt="Browse"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;h3&gt;New media added&lt;/h3&gt;
+            &lt;div data-role="collapsible-set" data-inset="true"&gt;
+
+                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
+                            &lt;h3&gt;Defiance&lt;/h3&gt;
+                            &lt;p&gt; Third person open world MMO&lt;/p&gt;
+                        &lt;/div&gt;
+
+                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
+                            &lt;h3&gt;Tomb Raider&lt;/h3&gt;
+                            &lt;p&gt;&lt;strong&gt;Survival action game.&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+
+                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
+                            &lt;h3&gt;Imagine dragons&lt;/h3&gt;
+                            &lt;p&gt;&lt;strong&gt;American alternative rock band.&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+
+                        &lt;div data-role="collapsible" data-collapsed="true"&gt;
+                            &lt;h3&gt;Borderlands 2&lt;/h3&gt;
+                            &lt;p&gt;&lt;strong&gt;First person open world RPG.&lt;/strong&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="footer" data-position="fixed"&gt;
+
+            &lt;div data-role="navbar" data-icon-pos="top"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div data-role="page" id="browse" data-add-back-btn="true" data-theme="a"&gt;
+
+        &lt;div data-role="header" data-position="fixed"&gt;
+
+            &lt;center&gt;
+                &lt;p&gt;&lt;a href="#home"&gt;Media library&lt;/a&gt;&lt;/p&gt;
+            &lt;/center&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="content"&gt;
+
+
+                &lt;h3&gt;Create load out&lt;/h3&gt;
+                &lt;div data-role="listview" class="ui-grid-b" data-inset="true" data-filter="true"&gt;
+                    &lt;div class="ui-block-a"&gt;&lt;a href="#browse2" data-filter="Xbox" id="Xbox"&gt;&lt;img src="images/Xbox.jpg" border="0" width="35" height="35" alt="Browse Xbox" data-role="button"&gt;&lt;/br&gt;Browse Xbox&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class="ui-block-b"&gt;&lt;a href="#browse2" data-filter="Playstation" id="Playsation"&gt;&lt;img src="images/Playstation.jpg" border="0" width="35" height="35" alt="Browse Playstation" data-role="button"&gt;&lt;/br&gt;Browse Playstation&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class="ui-block-c"&gt;&lt;a href="#browse2" data-filter="wiiu" id="Wiiu"&gt;&lt;img src="images/Wiiu.jpg" border="0" width="35" height="35" alt="Browse Wii u" data-role="button"&gt;&lt;/br&gt;Browse Wii u&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class="ui-block-a"&gt;&lt;a href="#browse2" data-filter="PC" id="PC"&gt;&lt;img src="images/PC.jpg" border="0" width="35" height="35" alt="Browse PC" data-role="button"&gt;&lt;/br&gt;Browse PC&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class="ui-block-b"&gt;&lt;a href="#browse2" data-filter="Movie" id="Movie"&gt;&lt;img src="images/Movie.jpg" border="0" width="35" height="35" alt="Browse Movies" data-role="button"&gt;&lt;/br&gt;Browse Movies&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class="ui-block-c"&gt;&lt;a href="#browse2" data-filter="Music" id="Music"&gt;&lt;img src="images/Music.jpg" border="0" width="35" height="35" alt="Browse Music" data-role="button"&gt;&lt;/br&gt;Browse Music&lt;/a&gt;&lt;/div&gt;
+
+                &lt;/ul&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="footer"&gt;
+            &lt;div data-role="navbar" data-icon-pos="top"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div data-role="page" id="browse2" data-add-back-btn="true" data-theme="a"&gt;
+
+        &lt;div data-role="header" data-position="fixed"&gt;
+
+            &lt;center&gt;
+                &lt;p&gt;&lt;a href="#home"&gt;Media library&lt;/a&gt;&lt;/p&gt;
+            &lt;/center&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="content"&gt;
+
+            &lt;h3&gt;Upcoming games&lt;/h3&gt;
+            &lt;p&gt;Theres no content currently available!&lt;/p&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="footer"&gt;
+            &lt;div data-role="navbar" data-icon-pos="top"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div data-role="page" id="links" data-add-back-btn="true" data-theme="a"&gt;
+
+        &lt;div data-role="header" data-position="fixed"&gt;
+
+            &lt;center&gt;
+                &lt;p&gt;&lt;a href="#home"&gt;media library&lt;/a&gt;&lt;/p&gt;
+            &lt;/center&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="content"&gt;
+
+            &lt;p&gt;
+            &lt;center&gt;
+              &lt;a href="https://github.com/b42626/MiU3/tree/master/gold" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;gold Code&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;gold Live&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="https://github.com/b42626/MiU3/tree/master/bronze" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;bronze Code&lt;/a&gt;&lt;br/&gt;
+            &lt;a href="http://b42626.github.io/MiU2" rel="external" data-ajax="false" data-role="button" data-mini="true" data-icon="star" data-inline="true" data-theme="e"&gt;bronze Live&lt;/a&gt;&lt;br/&gt;
+            &lt;/center&gt;
+            &lt;/p&gt;
+
+        &lt;/div&gt;
+
+        &lt;div data-role="footer"&gt;
+            &lt;div data-role="navbar" data-icon-pos="top"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="additem.html" rel="external" data-ajax="false" data-inline="true" data-icon="plus" data-add-back-btn="true"&gt;Add&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#browse" id="browseButton" rel="external" data-ajax="false" data-inline="true" data-icon="grid" data-add-back-btn="true"&gt;Browse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#links" id="linksButton" rel="internal" data-ajax="true" data-inline="true" data-icon="info" data-add-back-btn="true"&gt;Links&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;script type="text/javascript" src="js/JSON.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">bronze maintained by <a href="https://github.com/b42626">b42626</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
